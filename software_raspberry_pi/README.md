@@ -76,3 +76,13 @@
 ## I tried, but found issues
 
 - installing dependencies for [MariaDB Connector](https://mariadb.com/docs/skysql/connect/programming-languages/python/install/)
+
+# Useful commands for MySQL
+
+|| Command Type || Command                               || Purpose                                                             ||
+| :------------ | :------------------------------------- | :------------------------------------------------------------------- |
+| bash          | `sudo mysql;`                          | enters the MySQL terminal                                            |
+| MySQL         | `use weather;`                         | connect to the `weather` database                                    |
+| MySQL         | `show full tables;`                    | list all the tables inside the current database                      |
+| MySQL         | `show columns in WeatherMeasurements;` | lists the columens in the table `WeatherMeasurements`                |
+| MySQL         | `select * from WeatherMeasurements;`   | lists all rows and related data from the table `WeatherMeasurements` |
