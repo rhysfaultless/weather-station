@@ -1,5 +1,6 @@
 import gpiozero
 import time
+import mysql.connector
 import status_led # to blink when this program is running
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
@@ -27,11 +28,48 @@ def reset_rainfall_volume_counted():
     rainfall_volume_counted = 0
 
 
+def add_to_database():
+    global rainfall_volume_counted
+    global ambient_temperature
+    weather_database = mysql.connector.connect(
+        host="localhost",
+        user="database_administrator",
+        password="database_administrator_password",
+        database="weather"
+    )
+    cursor = weather_database.cursor()
+    # weather_measurements_table_last_row_identification = cursor.lastrowid
+
+    timestamp_for_database = time.strftime('%Y-%m-%d %H:%M:%S')
+
+    data_weather_element = {
+        'AmbientTemperature': ambient_temperature,
+        'RainfallVolume': rainfall_volume_counted,
+        'TimestampValue': timestamp_for_database
+    }
+
+    add_weather_element = ("INSERT INTO WeatherMeasurements "
+              "(AmbientTemperature, RainfallVolume, TimestampValue) "
+              "VALUES (%(AmbientTemperature)s, %(RainfallVolume)s, %(TimestampValue)s)")
+
+    # ElementIdentification is not included in data_weather_element or add_weather_element
+    # This is because the table, WeatherMeasurements is configured to AutoIncrement this element
+
+    cursor.execute(add_weather_element, data_weather_element)
+    weather_database.commit()
+    cursor.close()
+    weather_database.close()
+
+    print(str(rainfall_volume_counted))
+
+    reset_rainfall_buckets_counted()
+    reset_rainfall_volume_counted()
+
+
 while True:
     start_time = time.time()
 
     while time.time() <= start_time + sampling_interval_time:
         rain_sensor_gpio_pin.when_pressed = rainfall_bucket_tipped
 
-    reset_rainfall_buckets_counted()
-    reset_rainfall_volume_counted()
+    add_to_database()
