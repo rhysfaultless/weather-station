@@ -1,7 +1,7 @@
 import gpiozero # for GPIO pin control
 import time # for database timestamp and LED blinking
 import mysql.connector # for database updates
-import threading # for running LED process in the background
+import threading # for running LED and temperature processes in the background
 import board # for temperature measurement
 import busio # for temperature measurement
 import adafruit_mcp9808 # for temperature measurement
