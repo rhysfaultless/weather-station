@@ -3,7 +3,7 @@ import time
 import status_led # to blink when this program is running
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
-sampling_interval_time = 5 # measurements taken every 5 seconds
+sampling_interval_time = 10 # measurements taken every 10 seconds
 volume_per_rainfall_bucket = 0.2794 # millimetres^3 per bucket tip. Refer to hardware datasheet.
 rainfall_buckets_counted = 0
 rainfall_volume_counted = 0
