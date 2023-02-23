@@ -11,6 +11,7 @@ rainfall_volume_counted = 0
 
 def rainfall_bucket_tipped():
     global rainfall_buckets_counted
+    global rainfall_volume_counted
     rainfall_buckets_counted += 1
     rainfall_volume_counted = rainfall_buckets_counted * volume_per_rainfall_bucket
 
