@@ -7,7 +7,7 @@ import busio # for temperature measurement
 import adafruit_mcp9808 # for temperature measurement
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
-sampling_interval_time = 10 # measurements taken every 10 seconds
+sampling_interval_time = 900 # measurements taken every 900 seconds (15 minutes)
 volume_per_rainfall_bucket = 0.2794 # millimetres^3 per bucket tip. Refer to hardware datasheet.
 rainfall_buckets_counted = 0
 rainfall_volume_counted = 0
