@@ -7,6 +7,7 @@ sampling_interval_time = 10 # measurements taken every 10 seconds
 volume_per_rainfall_bucket = 0.2794 # millimetres^3 per bucket tip. Refer to hardware datasheet.
 rainfall_buckets_counted = 0
 rainfall_volume_counted = 0
+ambient_temperature = 0  # Using zero as a placeholder, until adding functions for temperature sensor MCP9808
 
 
 def rainfall_bucket_tipped():
