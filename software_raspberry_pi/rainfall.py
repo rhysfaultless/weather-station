@@ -1,5 +1,6 @@
 import gpiozero
 import time
+import status_led # to blink when this program is running
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
 sampling_interval_time = 5 # measurements taken every 5 seconds
