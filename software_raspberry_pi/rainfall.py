@@ -1,7 +1,7 @@
-import gpiozero
-import time
-import mysql.connector
-import threading
+import gpiozero # for GPIO pin control
+import time # for database timestamp and LED blinking
+import mysql.connector # for database updates
+import threading # for running LED process in the background
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
 sampling_interval_time = 10 # measurements taken every 10 seconds
