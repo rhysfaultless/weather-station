@@ -66,6 +66,13 @@
       - `RainfallVolumen`
       - `TimestampValue`
     - The `ElementIdentification` column is set as the primary key.
+  - [Adafruit MCP9809 library](https://learn.adafruit.com/adafruit-mcp9808-precision-i2c-temperature-sensor-guide/python-circuitpython)
+    ```
+    sudo pip3 install adafruit-circuitpython-mcp9808
+    ```
+  - Configure the Raspberry Pi to use I2C devices, using either:
+    - the GUI tool `Raspberry Pi Configuration` 
+    - or the commant line tool `sudo raspi-config`
 
 
 ## Resources
