@@ -77,6 +77,7 @@ def add_to_database():
 
     print("Rainfall volume: " + str(rainfall_volume_counted) + " mm^3")
     print("Ambient temperature: " + str(average_temperature) + "°C")
+    print("\r")
 
 
 def add_to_temperature_list():
