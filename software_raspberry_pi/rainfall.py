@@ -1,7 +1,7 @@
 import gpiozero
 import time
 import mysql.connector
-import status_led # to blink when this program is running
+import threading
 
 rain_sensor_gpio_pin = gpiozero.Button("BOARD18")
 sampling_interval_time = 10 # measurements taken every 10 seconds
@@ -9,6 +9,17 @@ volume_per_rainfall_bucket = 0.2794 # millimetres^3 per bucket tip. Refer to har
 rainfall_buckets_counted = 0
 rainfall_volume_counted = 0
 ambient_temperature = 0  # Using zero as a placeholder, until adding functions for temperature sensor MCP9808
+
+
+def led_blink():
+    led_gpio_pin = gpiozero.LED("BOARD16")
+    led_blinking_interval_on = 0.6
+    led_blinking_interval_off = 5
+    while True:
+        led_gpio_pin.on()
+        time.sleep(led_blinking_interval_on)
+        led_gpio_pin.off()
+        time.sleep(led_blinking_interval_off)
 
 
 def rainfall_bucket_tipped():
@@ -67,9 +78,10 @@ def add_to_database():
 
 
 while True:
-    start_time = time.time()
-
-    while time.time() <= start_time + sampling_interval_time:
-        rain_sensor_gpio_pin.when_pressed = rainfall_bucket_tipped
-
-    add_to_database()
+    threaded_led_blinking = threading.Thread(target=led_blink)
+    threaded_led_blinking.start()
+    while True:
+        start_time = time.time()
+        while time.time() <= start_time + sampling_interval_time:
+            rain_sensor_gpio_pin.when_pressed = rainfall_bucket_tipped
+        add_to_database()
