@@ -93,6 +93,7 @@
 | MySQL         | `show full tables;`                    | list all the tables inside the current database                      |
 | MySQL         | `show columns in WeatherMeasurements;` | lists the columens in the table `WeatherMeasurements`                |
 | MySQL         | `select * from WeatherMeasurements;`   | lists all rows and related data from the table `WeatherMeasurements` |
+| MySQL         | `delete from WeatherMeasurements;`     | deletes all rows from the table `WeatherMeasurements`                |
 
 # TODO hardware to purchase
 
