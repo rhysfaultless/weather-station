@@ -6,7 +6,7 @@ import mysql.connector # for database updates
 weather_database = mysql.connector.connect(
     host="localhost",
     user="database_administrator",
-    password="database_administrator_password",
+    password="database_administrators_password",
     database="weather"
 )
 
