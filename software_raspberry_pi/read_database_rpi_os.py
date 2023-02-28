@@ -109,31 +109,30 @@ else:
                                 database_temperature_list_15_minutes.append(database_row[1])
                                 database_rainfall_list_15_minutes.append(database_row[2])
 
-
     # Calculate the average temperatures and rainfall volumes using the compiled lists
     if len(database_temperature_list_15_minutes) >= (expected_number_rows_15_minutes - 1):
         average_temperature_15_minutes = sum(database_temperature_list_15_minutes) / len(database_temperature_list_15_minutes)
-        total_rainfall_15_minutes = sum(database_rainfall_list_15_minutes) / len(database_rainfall_list_15_minutes)
+        total_rainfall_15_minutes = sum(database_rainfall_list_15_minutes)
 
         if len(database_temperature_list_1_hour) >= (expected_number_rows_1_hour - 1):
             average_temperature_1_hour = sum(database_temperature_list_1_hour) / len(database_temperature_list_1_hour)
-            total_rainfall_1_hour = sum(database_rainfall_list_1_hour) / len(database_rainfall_list_1_hour)
+            total_rainfall_1_hour = sum(database_rainfall_list_1_hour)
         
             if len(database_temperature_list_1_day) >= (expected_number_rows_1_day - 1):
                 average_temperature_1_day = sum(database_temperature_list_1_day) / len(database_temperature_list_1_day)
-                total_rainfall_1_day = sum(database_rainfall_list_1_day) / len(database_rainfall_list_1_day)
+                total_rainfall_1_day = sum(database_rainfall_list_1_day)
         
                 if len(database_temperature_list_2_days) >= (expected_number_rows_2_days - 1):
                     average_temperature_2_days = sum(database_temperature_list_2_days) / len(database_temperature_list_2_days)
-                    total_rainfall_2_days = sum(database_rainfall_list_2_days) / len(database_rainfall_list_2_days)
+                    total_rainfall_2_days = sum(database_rainfall_list_2_days)
 
                     if len(database_temperature_list_3_days) >= (expected_number_rows_3_days - 1):
                         average_temperature_3_days = sum(database_temperature_list_3_days) / len(database_temperature_list_3_days)
-                        total_rainfall_3_days = sum(database_rainfall_list_3_days) / len(database_rainfall_list_3_days)
+                        total_rainfall_3_days = sum(database_rainfall_list_3_days)
 
                         if len(database_temperature_list_7_days) >= (expected_number_rows_7_days - 1):
                             average_temperature_7_days = sum(database_temperature_list_7_days) / len(database_temperature_list_7_days)
-                            total_rainfall_7_days = sum(database_rainfall_list_7_days) / len(database_rainfall_list_7_days)
+                            total_rainfall_7_days = sum(database_rainfall_list_7_days)
                         else:
                             print("\r")
                             print("Error: There are no measurements within the last 7 days.")
