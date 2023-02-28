@@ -25,22 +25,22 @@
 
 # Useful commands for MySQL
 
-|| Command Type || Command                               || Purpose                                                             ||
-| :------------ | :------------------------------------- | :------------------------------------------------------------------- |
-| bash          | `sudo mysql;`                          | enters the MySQL terminal                                            |
-| MySQL         | `use weather;`                         | connect to the `weather` database                                    |
-| MySQL         | `show full tables;`                    | list all the tables inside the current database                      |
-| MySQL         | `show columns in WeatherMeasurements;` | lists the columens in the table `WeatherMeasurements`                |
-| MySQL         | `select * from WeatherMeasurements;`   | lists all rows and related data from the table `WeatherMeasurements` |
-| MySQL         | `delete from WeatherMeasurements;`     | deletes all rows from the table `WeatherMeasurements`                |
+| Command Type | Command                                | Purpose                                                              |
+| :----------- | :------------------------------------- | :------------------------------------------------------------------- |
+| bash         | `sudo mysql;`                          | enters the MySQL terminal                                            |
+| MySQL        | `use weather;`                         | connect to the `weather` database                                    |
+| MySQL        | `show full tables;`                    | list all the tables inside the current database                      |
+| MySQL        | `show columns in WeatherMeasurements;` | lists the columens in the table `WeatherMeasurements`                |
+| MySQL        | `select * from WeatherMeasurements;`   | lists all rows and related data from the table `WeatherMeasurements` |
+| MySQL        | `delete from WeatherMeasurements;`     | deletes all rows from the table `WeatherMeasurements`                |
 
 # TODO hardware to purchase
 
-|| Quantity || Description               || Manufacturer || Item Number || DigiKey                                                                                       ||
-| :-------- | :------------------------- | :------------ | :----------- | :--------------------------------------------------------------------------------------------- |
-| 1         | Breadboard                 | Adafruit      | 2310         | [1528-1369-ND](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2310/5629417) |
-| 2         | 0.1" header, female, 1 X 6 | Adam Tech     | RS1-06-G     | [2057-RS1-06-G-ND](https://www.digikey.ca/en/products/detail/adam-tech/RS1-06-G/9832050)       | 
-| 1         | Terminal (RJ12)            | Adam Tech     | MTJ-661X1    | [2057-MTJ-661X1-ND](https://www.digikey.ca/en/products/detail/adam-tech/MTJ-661X1/9832264)     |
+| Quantity  | Description                | Manufacturer | Item Number | DigiKey                                                                                        |
+| :-------- | :------------------------- | :----------- | :---------- | :--------------------------------------------------------------------------------------------- |
+| 1         | Breadboard                 | Adafruit     | 2310        | [1528-1369-ND](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2310/5629417) |
+| 2         | 0.1" header, female, 1 X 6 | Adam Tech    | RS1-06-G    | [2057-RS1-06-G-ND](https://www.digikey.ca/en/products/detail/adam-tech/RS1-06-G/9832050)       | 
+| 1         | Terminal (RJ12)            | Adam Tech    | MTJ-661X1   | [2057-MTJ-661X1-ND](https://www.digikey.ca/en/products/detail/adam-tech/MTJ-661X1/9832264)     |
 
 # Installation
 
