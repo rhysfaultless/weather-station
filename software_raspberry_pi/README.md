@@ -7,12 +7,10 @@
 - Git and GitHub
 - VS Code
 - [VS Code extension for Remote development](https://code.visualstudio.com/docs/remote/ssh)
-- [Ubuntu Server 22.04](https://ubuntu.com/download/raspberry-pi) or Raspberry Pi OS (64-bit)
+- [Ubuntu Server 22.04](https://ubuntu.com/download/raspberry-pi)
 - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 - [gpiozero](https://gpiozero.readthedocs.io/en/stable/index.html)
-- [MySQL Connector](https://www.w3schools.com/python/python_mysql_getstarted.asp)
-- [MariaDB](https://mariadb.com/kb/en/installing-mariadb-deb-files/#installing-mariadb-packages-with-apt)
-- [Adafruit MCP9808 library](https://learn.adafruit.com/adafruit-mcp9808-precision-i2c-temperature-sensor-guide/python-circuitpython)
+  - Install with `sudo apt install python3-gpiozero`
 
 ## Resources
 
